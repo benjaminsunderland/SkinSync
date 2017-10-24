@@ -6,22 +6,16 @@
       <ul>
       <% tattoo.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
+    <% end %>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :tattoo_name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :image_link %>
-    <%= form.text_field :image_link, id: :tattoo_image_link %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  <%= simple_form_for @tattoo do |f| %>
+    <%= f.input :name %>
+    <%= f.input :image_link %>
+    <%= f.button :submit %>
+  <% end %>

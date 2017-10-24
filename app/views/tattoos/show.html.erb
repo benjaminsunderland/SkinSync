@@ -7,7 +7,7 @@
 
 <p>
   <strong>Image link:</strong>
-  <%= @tattoo.image_link %>
+  <td><%= image_tag @tattoo.image_link_url.to_s %></td>
 </p>
 
 <%= link_to 'Edit', edit_tattoo_path(@tattoo) %> |

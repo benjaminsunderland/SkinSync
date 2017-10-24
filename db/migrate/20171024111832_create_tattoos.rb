@@ -3,7 +3,6 @@ class CreateTattoos < ActiveRecord::Migration[5.1]
     create_table :tattoos do |t|
       t.string :name
       t.string :image_link
-
       t.timestamps
     end
   end
