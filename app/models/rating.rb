@@ -1,4 +1,3 @@
 class Rating < ApplicationRecord
-  belongs_to :artist
-
+  has_many :artists
 end

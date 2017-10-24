@@ -1,3 +1,3 @@
 class Style < ApplicationRecord
-  belongs_to :tattoo
+  has_and_belongs_to_many :tattoos
 end
