@@ -1,0 +1,2 @@
+module ParloursHelper
+end

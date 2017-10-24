@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tattoo.name %>
+</p>
+
+<p>
+  <strong>Image link:</strong>
+  <%= @tattoo.image_link %>
+</p>
+
+<%= link_to 'Edit', edit_tattoo_path(@tattoo) %> |
+<%= link_to 'Back', tattoos_path %>

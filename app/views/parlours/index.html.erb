@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parlours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Contact</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parlours.each do |parlour| %>
+      <tr>
+        <td><%= parlour.name %></td>
+        <td><%= parlour.location %></td>
+        <td><%= parlour.contact %></td>
+        <td><%= parlour.description %></td>
+        <td><%= link_to 'Show', parlour %></td>
+        <td><%= link_to 'Edit', edit_parlour_path(parlour) %></td>
+        <td><%= link_to 'Destroy', parlour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parlour', new_parlour_path %>
