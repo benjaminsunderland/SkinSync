@@ -10,18 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024111913) do
+ActiveRecord::Schema.define(version: 20171024142331) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "parlour_id"
+    t.integer "rating_id"
+  end
+
+  create_table "artists_tattoos", id: false, force: :cascade do |t|
+    t.integer "tattoo_id", null: false
+    t.integer "artist_id", null: false
   end
 
   create_table "body_parts", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "body_parts_tattoos", id: false, force: :cascade do |t|
+    t.integer "tattoo_id", null: false
+    t.integer "body_part_id", null: false
   end
 
   create_table "parlours", force: :cascade do |t|
@@ -43,6 +55,11 @@ ActiveRecord::Schema.define(version: 20171024111913) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "styles_tattoos", id: false, force: :cascade do |t|
+    t.integer "tattoo_id", null: false
+    t.integer "style_id", null: false
   end
 
   create_table "tattoos", force: :cascade do |t|
