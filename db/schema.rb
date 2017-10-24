@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024105232) do
+ActiveRecord::Schema.define(version: 20171024111913) do
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "body_parts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parlours", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "contact"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "ratings", force: :cascade do |t|
     t.integer "star"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tattoos", force: :cascade do |t|
+    t.string "name"
+    t.string "image_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

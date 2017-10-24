@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @parlour.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @parlour.location %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @parlour.contact %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @parlour.description %>
+</p>
+
+<%= link_to 'Edit', edit_parlour_path(@parlour) %> |
+<%= link_to 'Back', parlours_path %>

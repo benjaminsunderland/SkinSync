@@ -1,0 +1,37 @@
+<%= form_with(model: parlour, local: true) do |form| %>
+  <% if parlour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parlour.errors.count, "error") %> prohibited this parlour from being saved:</h2>
+
+      <ul>
+      <% parlour.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :parlour_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :parlour_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, id: :parlour_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :parlour_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
