@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'search/body_parts'
+
+  get 'search/styles'
+
   get 'home/index'
 
   root 'home#index'
