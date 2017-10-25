@@ -10,6 +10,32 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+ @import "bootstrap";
+ @import "home.scss";
+
+ body {
+   background-image: image-url("background.jpg");
+   font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
+ }
+
+ /* ## NAVBAR CUSTOMISATIONS ## */
+
+ .navbar-default {
+   background-color: white;
+   height: 120px;
+ }
+
+ .heading {
+   font-family: 'Aclonica';
+   margin-left: 10px;
+   margin-top: 5%;
+   vertical-align: middle;
+   display: inline-block;
+   color: #414143;
+}
+
+ .navbar-container {
+   width: 70%;
+   margin: 0 auto;
+ }
