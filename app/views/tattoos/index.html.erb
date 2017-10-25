@@ -13,9 +13,9 @@
 
   <tbody>
     <% @tattoos.each do |tattoo| %>
-      <tr>
+      <tr id='<%= tattoo.id %>'>
         <td><%= tattoo.name %></td>
-        <td><%= tattoo.image_link %></td>
+        <td><%= image_tag tattoo.image_link_url.to_s %></td>
         <td><%= link_to 'Show', tattoo %></td>
         <td><%= link_to 'Edit', edit_tattoo_path(tattoo) %></td>
         <td><%= link_to 'Destroy', tattoo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
