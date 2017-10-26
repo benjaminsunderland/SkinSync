@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   get 'search/styles'
 
-  post 'search/styles', to: 'search#styles_search'
-
   get 'home/index'
 
   root 'home#index'
