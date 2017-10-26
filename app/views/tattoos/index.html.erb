@@ -3,7 +3,14 @@
 <h1>Tattoos</h1>
 <%=@style_array%>
 
-<table>
+<% @filter_tattoos.each do |tattoo| %>
+  <tr id='<%= tattoo.id %>'>
+    <td><%= tattoo.name %></td>
+    <td><%= image_tag tattoo.image_link_url.to_s %></td>
+  </tr>
+<% end %>
+
+<!-- <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -23,7 +30,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 

@@ -4,7 +4,7 @@ class SearchController < ApplicationController
 
   def styles
     @body_parts = [params[:arm], params[:back], params[:leg], params[:torso]]
-    @body_parts_array = ["arm", "back", "leg", "torso"]
+    @body_parts_array = ["Arm", "Back", "Leg", "Torso"]
     @body_parts.each_with_index do |body_part, index|
         @body_parts_array.delete_at(index) if body_part == nil
     end
