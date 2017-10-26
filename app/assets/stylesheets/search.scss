@@ -10,6 +10,11 @@ li {
   display: inline-block;
 }
 
+h1 {
+  font-weight: bold;
+  color: #f9f1e6;
+}
+
 input[type="checkbox"][id^="cb"] {
   display: none;
 }
