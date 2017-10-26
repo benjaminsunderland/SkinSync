@@ -9,6 +9,27 @@
   <strong>Image link:</strong>
   <td><%= image_tag @tattoo.image_link_url.to_s %></td>
 </p>
+<% @artist = @tattoo.artists %>
+
+<%=
+@tattoo.artists.map do |x|
+  x.name
+end
+%>
+<br>
+<%=
+@tattoo.artists.map do |x|
+  Parlour.find(x.id).name+" "+
+  Parlour.find(x.id).location+" "+
+  Parlour.find(x.id).contact+" "+
+  Parlour.find(x.id).description+" "
+end
+%>
+<br>
+
+
+<%= link_to 'Edit', edit_tattoo_path(@tattoo) %>
+
 
 <%= link_to 'Edit', edit_tattoo_path(@tattoo) %> |
 <%= link_to 'Back', tattoos_path %>
