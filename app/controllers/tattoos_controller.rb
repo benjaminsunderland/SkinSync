@@ -5,6 +5,13 @@ class TattoosController < ApplicationController
   # GET /tattoos.json
   def index
     @tattoos = Tattoo.all
+    @filter = [params[:gothic], params[:flowers], params[:animals], params[:butterflies], params[:body_parts]]
+    @style_array = ["gothic", "flowers", "animals", "butterflies"]
+    @filter.each_with_index do |style, index|
+        @style_array.delete_at(index) if style == nil
+    end
+    @style_array << @filter.last
+
   end
 
   # GET /tattoos/1
