@@ -3,6 +3,8 @@
 <p>
   <strong>Name:</strong>
   <%= @tattoo.name %>
+  <%= @tattoo.id %>
+  <td><%= @tattoo.artists.map { |x| x.name }.join %></td>
 </p>
 
 <p>

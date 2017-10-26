@@ -1,5 +1,32 @@
 <h1>New Artist</h1>
+<% artist = @artist %>
+<%= form_with(model: artist, local: true) do |form| %>
+  <% if artist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
 
-<%= render 'form', artist: @artist %>
+      <ul>
+      <% artist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :artist_name %>
+
+    <%= collection_select(:artist, :rating_id, @ratings, :id, :star) %>
+    <%= collection_select(:artist, :parlour_id, @parlours, :id, :name) %>
+
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+  <% end %>
+
 
 <%= link_to 'Back', artists_path %>
