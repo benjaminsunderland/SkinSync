@@ -1,6 +1,20 @@
+<style>
+  form
+    {
+      background:lightgrey;
+      padding:10px
+    }
+
+    label
+    {
+      border:none;
+      margin:0;
+      padding:0;
+    }
+</style>
 <%= form_with(model: artist, local: true) do |form| %>
   <% if artist.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
 
       <ul>
@@ -11,12 +25,20 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :artist_name %>
+    <%= form.text_field :name, id: :artist_name, :class=> 'form-control' %>
   </div>
+  <div class="form-group">
+    <%= form.label :rating_id %>
+    <%= collection_select(:artist, :rating_id, Rating.all, :id, :star,{:prompt=>true}, {:class=>'form-control'})  %>
+  </div>
+  <div class="form-group">
+    <%= form.label :parlour_id %>
+    <%= collection_select(:artist, :parlour_id, Parlour.all, :id, :name, {:prompt=>true}, {:class=>'form-control'}) %>
 
-  <div class="actions">
-    <%= form.submit %>
+  </div>
+  <div class="form-group">
+    <%= form.submit :class=> 'btn btn-default'  %>
   </div>
 <% end %>
