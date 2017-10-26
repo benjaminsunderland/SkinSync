@@ -1,17 +1,29 @@
 <div class="title_box">
   <h1>Where would you like your tattoo?</h1>
-  <ul>
-    <li><input type="checkbox" id="cb1" />
-      <label for="cb1"><img src="http://lorempixel.com/100/100" /></label>
-    </li>
-    <li><input type="checkbox" id="cb2" />
-      <label for="cb2"><img src="http://lorempixel.com/101/101" /></label>
-    </li>
-    <li><input type="checkbox" id="cb3" />
-      <label for="cb3"><img src="http://lorempixel.com/102/102" /></label>
-    </li>
-    <li><input type="checkbox" id="cb4" />
-      <label for="cb4"><img src="http://lorempixel.com/103/103" /></label>
-    </li>
-  </ul>
+  <form action="/search/styles">
+    <ul>
+      <li><input type="checkbox" id="cb1" name="arm"/>
+        <label for="cb1"><%= image_tag "arm.png"%>
+      </li>
+      <li><input type="checkbox" id="cb2" name="back"/>
+        <label for="cb2"><%= image_tag "back.png"%>
+      </li>
+      <li><input type="checkbox" id="cb3" name="leg"/>
+        <label for="cb3"><%= image_tag "leg.png"%>
+      </li>
+      <li><input type="checkbox" id="cb4" name="torso"/>
+        <label for="cb4"><%= image_tag "torso.png"%>
+      </li>
+    </ul>
+
+    <ul>
+      <div class="body_parts">Arm</div>
+      <div class="body_parts">Back</div>
+      <div class="body_parts">Leg</div>
+      <div class="body_parts">Torso</div>
+    </ul>
+
+    <input type="submit" value="Next">
+
+  </form>
 </div>
