@@ -5,5 +5,15 @@
   <%= @artist.name %>
 </p>
 
+<p>
+  <strong>Name:</strong>
+  <%= Parlour.find(@artist.parlour_id).name %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= Rating.find(@artist.rating_id).star %>
+</p>
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
