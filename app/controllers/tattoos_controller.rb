@@ -6,13 +6,31 @@ class TattoosController < ApplicationController
   def index
     @tattoos = Tattoo.all
     @filter = [params[:gothic], params[:flowers], params[:animals], params[:butterflies], params[:body_parts]]
-    @style_array = ["gothic", "flowers", "animals", "butterflies"]
+    @style_array = ["Gothic", "Flowers", "Animals", "Butterflies"]
     @filter.each_with_index do |style, index|
         @style_array.delete_at(index) if style == nil
     end
-    @style_array << @filter.last
+
+    body_parts_objects = BodyPart.all
+    @body_part_array = @filter.last.split(',')
+    @body_part_array.each do |body_part|
+      body_parts_objects.each do |object|
+        @tattoo_array_body_part << object.tattoos if object.name == body_part
+      end
+    end
+    styles_objects = Style.all
+    @style_array.each do |style|
+      styles_objects.each do |object|
+        @tattoo_array_styles << object.tattoos if object.name == style
+      end
+    end
+
+    @unfiltered_tattoo_array = @tattoo_array_body_part + @tattoo_array_styles
+    @filter_tattoos = @unfiltered_tattoo_array.detect{ |e| @unfiltered_tattoo_array.count(e) > 1 }
 
   end
+
+
 
   # GET /tattoos/1
   # GET /tattoos/1.json
