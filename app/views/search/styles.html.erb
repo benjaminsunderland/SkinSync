@@ -1,17 +1,30 @@
 <div class="title_box">
   <h1>What style?</h1>
-  <ul>
-    <li><input type="checkbox" id="cb1" />
-      <label for="cb1"><img src="http://lorempixel.com/100/100" /></label>
-    </li>
-    <li><input type="checkbox" id="cb2" />
-      <label for="cb2"><img src="http://lorempixel.com/101/101" /></label>
-    </li>
-    <li><input type="checkbox" id="cb3" />
-      <label for="cb3"><img src="http://lorempixel.com/102/102" /></label>
-    </li>
-    <li><input type="checkbox" id="cb4" />
-      <label for="cb4"><img src="http://lorempixel.com/103/103" /></label>
-    </li>
-  </ul>
+  <form action="/tattoos">
+    <ul>
+      <li><input type="checkbox" id="cb1" name="gothic"/>
+        <label for="cb1"><%= image_tag "gothic.png"%>
+      </li>
+      <li><input type="checkbox" id="cb2" name="flowers"/>
+        <label for="cb2"><%= image_tag "flowers.png"%>
+      </li>
+      <li><input type="checkbox" id="cb3" name="animals"/>
+        <label for="cb3"><%= image_tag "animals.png"%>
+      </li>
+      <li><input type="checkbox" id="cb4" name="butterflies"/>
+        <label for="cb4"><%= image_tag "butterflies.png"%>
+      </li>
+      <input type="hidden" name="body_parts" value=<%= @body_parts %>>
+    </ul>
+
+    <ul>
+      <div class="body_parts">Gothic</div>
+      <div class="body_parts">Flowers</div>
+      <div class="body_parts">Animals</div>
+      <div class="body_parts">Butterflies</div>
+    </ul>
+
+    <input type="submit" value="Next">
+
+  </form>
 </div>

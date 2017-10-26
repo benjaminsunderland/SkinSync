@@ -3,5 +3,7 @@ class SearchController < ApplicationController
   end
 
   def styles
+    @body_parts = [params[:arm], params[:back], params[:leg], params[:torso]]
   end
+
 end
