@@ -3,5 +3,6 @@ class SearchController < ApplicationController
   end
 
   def styles
+    @body_parts = params.permit(:arm, :back, :leg, :torso)
   end
 end
