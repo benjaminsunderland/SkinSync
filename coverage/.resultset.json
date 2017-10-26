@@ -1,35 +1,57 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/helpers/application_helper.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/helpers/artists_helper.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/artists_helper.rb": [
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/helpers/body_parts_helper.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/body_parts_helper.rb": [
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/helpers/parlours_helper.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/helpers/ratings_helper.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/parlours_helper.rb": [
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/helpers/styles_helper.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/ratings_helper.rb": [
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/helpers/tattoos_helper.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/search_helper.rb": [
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/controllers/tattoos_controller.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/styles_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/helpers/tattoos_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/search_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/tattoos_controller.rb": [
         1,
         1,
         null,
@@ -105,23 +127,22 @@
         null,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/controllers/application_controller.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/models/tattoo.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/models/tattoo.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/uploaders/image_uploader.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/uploaders/image_uploader.rb": [
         1,
         null,
         null,
@@ -174,95 +195,19 @@
         null,
         null
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/channels/application_cable/channel.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/channels/application_cable/connection.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/controllers/artists_controller.rb": [
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/controllers/body_parts_controller.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/artists_controller.rb": [
         0,
         0,
         null,
@@ -338,7 +283,7 @@
         0,
         0
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/controllers/parlours_controller.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/body_parts_controller.rb": [
         0,
         0,
         null,
@@ -414,7 +359,13 @@
         0,
         0
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/controllers/ratings_controller.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/home_controller.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/parlours_controller.rb": [
         0,
         0,
         null,
@@ -490,7 +441,7 @@
         0,
         0
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/controllers/styles_controller.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/ratings_controller.rb": [
         0,
         0,
         null,
@@ -566,44 +517,120 @@
         0,
         0
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/models/artist.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/models/body_part.rb": [
-        0,
-        0,
-        0
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/models/parlour.rb": [
-        0,
-        0,
-        0
-      ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/models/rating.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/controllers/styles_controller.rb": [
         0,
         0,
         null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
         0
       ],
-      "/Users/benjamin/Desktop/Makers/WeekNine/SkinSync/skinsync/app/models/style.rb": [
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/models/artist.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/models/body_part.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/models/parlour.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/models/rating.rb": [
+        0,
+        0,
+        0
+      ],
+      "/Users/jameshughes/MakersAcademy/Projects/Week8/SkinSync/app/models/style.rb": [
         0,
         0,
         0
       ]
     },
-    "timestamp": 1508862634
+    "timestamp": 1509011145
   }
 }

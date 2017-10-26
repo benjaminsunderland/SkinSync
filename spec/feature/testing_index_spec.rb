@@ -10,6 +10,4 @@ feature 'when visiting the index page' do
       expect(page).to have_content('Destroy')
     end
   end
-  pending scenario 'As guest I cannot edit or delete tatto' do
-  end
 end
