@@ -1,3 +1,31 @@
 // Place all the styles related to the Tattoos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.tattoo_box {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px 10px 20px 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.tattoo_img {
+  height: 250px;
+  width: 250px;
+  display: block;
+  margin:auto;
+}
+
+.tattoo_name {
+  width: 250px;
+  font-family: 'Aclonica';
+  text-align: center;
+  color: white;
+  display: block;
+  font-size: 200%;
+  margin: 0;
+}
