@@ -2,26 +2,29 @@
 
   <style>
 
-    .x
+    .tattoos_container
     {
       background: rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.8);
       padding-top: 20px;
       padding-bottom: 20px;
     }
 
-    .row
-    {
-      background: rgba(255, 255, 255, 0.4);
-    }
 
-    figure, .myInfo
+    figure, .tatto_info
     {
-
       padding:10px 30px 30px 30px;
-      color:#000;
+      color:#fff;
       text-shadow:1px 1px 1px lightgrey;
       border-radius:10px;
     }
+
+    .img-thumbnail
+    {
+      padding: 1rem;
+      box-shadow:1px 1px 1px #000;
+    }
+
     figcaption
     {
       font-size:20px;
@@ -36,21 +39,22 @@
       width:100%;
     }
 
-    .myInfo header
+    .tatto_info
+    {
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow:1px 1px 1px #000;
+    }
+
+    .tatto_info header
     {
       font-size:20px;
       text-align: center;
       margin-bottom:10px;
     }
 
-    .img-thumbnail
-    {
-      padding: 1rem;
-      box-shadow:1px 1px 1px #000;
-    }
 
   </style>
-  <div class='x'>
+  <div class='tattoos_container'>
   <div class='row'>
   <div class="col-md-6 col-lg-4">
   <figure>
@@ -58,51 +62,58 @@
   <%= image_tag @tattoo.image_link_url.to_s ,alt: "Picute of #{@tattoo.name} tattoo" , class: "img-thumbnail" %>
   </figure>
   </div>
-  <div class="col-md-6 col-lg-8 myInfo ">
-    <div class='row'>
-      <div class='col-md-6 col-md-offset-3'>
-        <% @artists = @tattoo.artists %>
+  <div class="col-md-6 col-lg-8 tatto_info ">
+    <% @artists = @tattoo.artists %>
 
-        <% @artists.each do |artist| %>
-        <header> Info </header>
-        <p>
-          <strong>Artist Name:</strong>
-          <%= artist.name %>
-        </p>
+    <% @artists.each do |artist| %>
+    <header> Info </header>
+    <p>
+      <strong>Artist Name:</strong>
+      <%= artist.name %>
+    </p>
 
-        <p>
-          <strong>Artist Rating :</strong>
-          <%= Rating.find(artist.rating_id).star %>
-        </p>
+    <p>
+      <strong>Artist Rating :</strong>
+      <%= Rating.find(artist.rating_id).star %>
+    </p>
 
-        <% parlour = Parlour.find(artist.parlour_id) %>
-        <p>
-          <strong>Parlour Name : </strong>
-          <%= parlour.name %>
-        </p>
+    <% parlour = Parlour.find(artist.parlour_id) %>
+    <p>
+      <strong>Parlour Name : </strong>
+      <%= parlour.name %>
+    </p>
 
-        <p>
-          <strong>Description : </strong>
-          <%= parlour.description %>
-        </p>
+    <p>
+      <strong>Description : </strong>
+      <%= parlour.description %>
+    </p>
 
-        <p>
-          <strong>Location : </strong>
-          <%= parlour.location %>
-        </p>
+    <p>
+      <strong>Location : </strong>
+      <%= parlour.location %>
+    </p>
 
-        <p>
-          <strong>Contact : </strong>
-          <%= parlour.contact %>
-        </p>
-      </div>
-    </div>
+    <p>
+      <strong>Contact : </strong>
+      <%= parlour.contact %>
+    </p>
+
+
   </div>
 </div>
 
-
 <% end %>
+<% new_params =[] %>
+<% params.each do |key,value| %>
+  <%new_params << key+'='+value %>
+<% end %>
+<%= new_params.join('&') %>
 
+<% new_params = 'gothic=on&butterflies=on&body_parts=Arm' %>
+<% url = 'http://localhost:3000/tattoos?'+new_params %>
+<!-- <a href='http://localhost:3000/tattoos?' -->
+<%= link_to 'Edit', url %> |
 <%= link_to 'Edit', edit_tattoo_path(@tattoo) %> |
 <%= link_to 'Back', tattoos_path %>
+
 </div>

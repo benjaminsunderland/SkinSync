@@ -1,14 +1,27 @@
 <p id="notice"><%= notice %></p>
-<div class="title_box">
-  <% @filter %>
-  <% @style_list %>
-  <% @body_part_list %>
 
-  <% @filter_tattoos.each do |tattoo| %>
+<div class="title_box">
+
+<% @filter_tattoos.each do |tattoo| %>
   <div class="tattoo_box">
       <div class="tattoo_name"><td><%= tattoo.name %></td></div>
-      <div class="tattoo"><a href="/tattoos/<%= tattoo.id %>"><td><%= image_tag tattoo.image_link_url.to_s  ,:class=> 'tattoo_img'%></td></a></div>
-    </tr>
-  </div>
+        <td>
+          <% new_params=[] %>
+          <% params.each do |key,value| %>
+            <%new_params << key+'='+value %>
+          <% end %>
+          <%= new_params.join('&') %>
+
+          <% new_params = 'gothic=on&butterflies=on&body_parts=Arm' %>
+          <% url = "http://localhost:3000/tattoos/#{tattoo.id}?"+new_params %>
+          <%= link_to url do %>
+            <%=image_tag tattoo.image_link_url.to_s ,:class=> 'tattoo_img'%>
+          <% end %>
+          <%= link_to tattoo do %>
+            <%=image_tag tattoo.image_link_url.to_s ,:class=> 'tattoo_img'%>
+          <% end %>
+        </td>
+    </div> 
   <% end %>
+  
 </div>
