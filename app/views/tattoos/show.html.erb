@@ -1,35 +1,108 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @tattoo.name %>
-</p>
+  <style>
 
-<p>
-  <strong>Image link:</strong>
-  <td><%= image_tag @tattoo.image_link_url.to_s %></td>
-</p>
-<% @artist = @tattoo.artists %>
+    .x
+    {
+      background: rgba(0, 0, 0, 0.4);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
 
-<%=
-@tattoo.artists.map do |x|
-  x.name
-end
-%>
-<br>
-<%=
-@tattoo.artists.map do |x|
-  Parlour.find(x.id).name+" "+
-  Parlour.find(x.id).location+" "+
-  Parlour.find(x.id).contact+" "+
-  Parlour.find(x.id).description+" "
-end
-%>
-<br>
+    .row
+    {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    figure, .myInfo
+    {
+
+      padding:10px 30px 30px 30px;
+      color:#000;
+      text-shadow:1px 1px 1px lightgrey;
+      border-radius:10px;
+    }
+    figcaption
+    {
+      font-size:20px;
+      text-align: center;
+      margin-bottom:10px;
+    }
+
+    figure img
+    {
+      display:block;
+      margin:auto;
+      width:100%;
+    }
+
+    .myInfo header
+    {
+      font-size:20px;
+      text-align: center;
+      margin-bottom:10px;
+    }
+
+    .img-thumbnail
+    {
+      padding: 1rem;
+      box-shadow:1px 1px 1px #000;
+    }
+
+  </style>
+  <div class='x'>
+  <div class='row'>
+  <div class="col-md-6 col-lg-4">
+  <figure>
+  <figcaption><%= @tattoo.name %></figcaption>
+  <%= image_tag @tattoo.image_link_url.to_s ,alt: "Picute of #{@tattoo.name} tattoo" , class: "img-thumbnail" %>
+  </figure>
+  </div>
+  <div class="col-md-6 col-lg-8 myInfo ">
+    <div class='row'>
+      <div class='col-md-6 col-md-offset-3'>
+        <% @artists = @tattoo.artists %>
+
+        <% @artists.each do |artist| %>
+        <header> Info </header>
+        <p>
+          <strong>Artist Name:</strong>
+          <%= artist.name %>
+        </p>
+
+        <p>
+          <strong>Artist Rating :</strong>
+          <%= Rating.find(artist.rating_id).star %>
+        </p>
+
+        <% parlour = Parlour.find(artist.parlour_id) %>
+        <p>
+          <strong>Parlour Name : </strong>
+          <%= parlour.name %>
+        </p>
+
+        <p>
+          <strong>Description : </strong>
+          <%= parlour.description %>
+        </p>
+
+        <p>
+          <strong>Location : </strong>
+          <%= parlour.location %>
+        </p>
+
+        <p>
+          <strong>Contact : </strong>
+          <%= parlour.contact %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<%= link_to 'Edit', edit_tattoo_path(@tattoo) %>
-
+<% end %>
 
 <%= link_to 'Edit', edit_tattoo_path(@tattoo) %> |
 <%= link_to 'Back', tattoos_path %>
+</div>
