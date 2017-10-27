@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div class="title_box">
+  <% @filter %>
+  <% @style_list %>
+  <% @body_part_list %>
 
-<h1>Tattoos</h1>
-<% @filter %>
-<% @style_list %>
-<% @body_part_list %>
-
-<% @filter_tattoos.each do |tattoo| %>
-  <tr id='<%= tattoo.id %>'>
-    <td><%= tattoo.name %></td>
-    <td><%= image_tag tattoo.image_link_url.to_s %></td>
-  </tr>
-<% end %>
+  <% @filter_tattoos.each do |tattoo| %>
+  <div class="tattoo_box">
+      <div class="tattoo_name"><td><%= tattoo.name %></td></div>
+      <div class="tattoo"><a href="/tattoos/<%= tattoo.id %>"><td><%= image_tag tattoo.image_link_url.to_s  ,:class=> 'tattoo_img'%></td></a></div>
+    </tr>
+  </div>
+  <% end %>
+</div>
