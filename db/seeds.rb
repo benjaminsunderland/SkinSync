@@ -51,10 +51,10 @@ parlour10 = Parlour.create(name: 'Tattoo Hero', location: 'Chelsea', contact: '0
 
 
 rate1 = Rating.create(star: 1)
-rate2  = Rating.create(star: 2)
-rate3  = Rating.create(star: 3)
-rate4  = Rating.create(star: 4)
-rate5  = Rating.create(star: 5)
+rate2 = Rating.create(star: 2)
+rate3 = Rating.create(star: 3)
+rate4 = Rating.create(star: 4)
+rate5 = Rating.create(star: 5)
 
 
 artist1 = Artist.create(name: 'Keith', parlour_id: parlour1.id, rating_id: rate1.id)
@@ -80,6 +80,12 @@ body1.tattoos << tattoo1
 body2.tattoos << tattoo2
 body3.tattoos << tattoo3
 body4.tattoos << tattoo4
+body1.tattoos << tattoo5
+body2.tattoos << tattoo6
+body3.tattoos << tattoo7
+body4.tattoos << tattoo8
+body1.tattoos << tattoo9
+body2.tattoos << tattoo10
 
 
 #style_tattoos
@@ -87,7 +93,12 @@ style1.tattoos << tattoo1
 style2.tattoos << tattoo2
 style3.tattoos << tattoo3
 style4.tattoos << tattoo4
-
+style1.tattoos << tattoo5
+style2.tattoos << tattoo6
+style3.tattoos << tattoo7
+style4.tattoos << tattoo8
+style1.tattoos << tattoo9
+style2.tattoos << tattoo10
 
 #artists_tattoos
 artist10.tattoos << tattoo1

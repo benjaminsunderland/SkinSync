@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tattoos</h1>
-<%=@style_array%>
+<% @filter %>
+<% @style_list %>
+<% @body_part_list %>
 
 <% @filter_tattoos.each do |tattoo| %>
   <tr id='<%= tattoo.id %>'>
@@ -9,29 +11,3 @@
     <td><%= image_tag tattoo.image_link_url.to_s %></td>
   </tr>
 <% end %>
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image link</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tattoos.each do |tattoo| %>
-      <tr id='<%= tattoo.id %>'>
-        <td><%= tattoo.name %></td>
-        <td><%= image_tag tattoo.image_link_url.to_s %></td>
-        <td><%= link_to 'Show', tattoo %></td>
-        <td><%= link_to 'Edit', edit_tattoo_path(tattoo) %></td>
-        <td><%= link_to 'Destroy', tattoo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-<br>
-
-<%= link_to 'New Tattoo', new_tattoo_path %>
