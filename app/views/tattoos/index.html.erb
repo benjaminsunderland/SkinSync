@@ -10,18 +10,14 @@
           <% params.each do |key,value| %>
             <%new_params << key+'='+value %>
           <% end %>
-          <%= new_params.join('&') %>
 
-          <% new_params = 'gothic=on&butterflies=on&body_parts=Arm' %>
-          <% url = "http://localhost:3000/tattoos/#{tattoo.id}?"+new_params %>
+          <% url = "http://localhost:3000/tattoos/#{tattoo.id}?"+new_params.join('&') %>
+          
           <%= link_to url do %>
             <%=image_tag tattoo.image_link_url.to_s ,:class=> 'tattoo_img'%>
           <% end %>
-          <%= link_to tattoo do %>
-            <%=image_tag tattoo.image_link_url.to_s ,:class=> 'tattoo_img'%>
-          <% end %>
         </td>
-    </div> 
+    </div>
   <% end %>
-  
+
 </div>

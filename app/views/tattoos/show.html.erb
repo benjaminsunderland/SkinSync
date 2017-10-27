@@ -5,7 +5,6 @@
     .tattoos_container
     {
       background: rgba(0, 0, 0, 0.4);
-      background: rgba(255, 255, 255, 0.8);
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -14,8 +13,8 @@
     figure, .tatto_info
     {
       padding:10px 30px 30px 30px;
-      color:#fff;
-      text-shadow:1px 1px 1px lightgrey;
+      color:#414143;
+      font-family: 'Aclonica';
       border-radius:10px;
     }
 
@@ -41,8 +40,7 @@
 
     .tatto_info
     {
-      background: rgba(0, 0, 0, 0.5);
-      box-shadow:1px 1px 1px #000;
+      background: rgba(255, 255, 255, 0.9);
     }
 
     .tatto_info header
@@ -52,13 +50,29 @@
       margin-bottom:10px;
     }
 
+    .back {
+      text-align: center;
+      color: white;
+      font-family: 'Aclonica';
+      font-size: 200%;
+      margin-top: 20px;
+    }
+
+    .indi_tattoo_name {
+      text-align: center;
+      color: white;
+      font-family: 'Aclonica';
+      font-size: 200%;
+      margin-bottom:10px;
+    }
+
 
   </style>
   <div class='tattoos_container'>
   <div class='row'>
   <div class="col-md-6 col-lg-4">
   <figure>
-  <figcaption><%= @tattoo.name %></figcaption>
+  <figcaption class="indi_tattoo_name"><%= @tattoo.name %></figcaption>
   <%= image_tag @tattoo.image_link_url.to_s ,alt: "Picute of #{@tattoo.name} tattoo" , class: "img-thumbnail" %>
   </figure>
   </div>
@@ -66,7 +80,7 @@
     <% @artists = @tattoo.artists %>
 
     <% @artists.each do |artist| %>
-    <header> Info </header>
+    <header> Tattoo Info </header>
     <p>
       <strong>Artist Name:</strong>
       <%= artist.name %>
@@ -107,13 +121,12 @@
 <% params.each do |key,value| %>
   <%new_params << key+'='+value %>
 <% end %>
-<%= new_params.join('&') %>
 
 <% new_params = 'gothic=on&butterflies=on&body_parts=Arm' %>
 <% url = 'http://localhost:3000/tattoos?'+new_params %>
 <!-- <a href='http://localhost:3000/tattoos?' -->
-<%= link_to 'Edit', url %> |
-<%= link_to 'Edit', edit_tattoo_path(@tattoo) %> |
-<%= link_to 'Back', tattoos_path %>
+<div class="back"><%= link_to 'Close', url %></div>
+<% link_to 'Edit', edit_tattoo_path(@tattoo) %>
+<% link_to 'Back', tattoos_path %>
 
 </div>
