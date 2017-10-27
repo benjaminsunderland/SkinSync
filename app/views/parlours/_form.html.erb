@@ -1,6 +1,20 @@
+<style>
+  form
+    {
+      background:lightgrey;
+      padding:10px
+    }
+
+    label
+    {
+      border:none;
+      margin:0;
+      padding:0;
+    }
+</style>
 <%= form_with(model: parlour, local: true) do |form| %>
   <% if parlour.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger">
       <h2><%= pluralize(parlour.errors.count, "error") %> prohibited this parlour from being saved:</h2>
 
       <ul>
@@ -11,27 +25,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :parlour_name %>
+    <%= form.text_field :name, id: :parlour_name, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :location %>
-    <%= form.text_field :location, id: :parlour_location %>
+    <%= form.text_field :location, id: :parlour_location, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :contact %>
-    <%= form.text_field :contact, id: :parlour_contact %>
+    <%= form.text_field :contact, id: :parlour_contact, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description, id: :parlour_description %>
+    <%= form.text_field :description, id: :parlour_description, :class=> 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit :class=> 'btn btn-default'  %>
   </div>
 <% end %>
