@@ -1,31 +1,27 @@
 <p id="notice"><%= notice %></p>
-<style>
- img {max-width:300px}
- </style>
-<h1>Tattoos</h1>
-<%= @filter %><br>
-<%= @style_list %><br>
-<%= @body_part_list %><br>
-h
-<%= @filter_tattoos %>
-<% @filter_tattoos.each do |tattoo| %>
-  <tr id='<%= tattoo.id %>'>
-    <td><%= tattoo.name %></td>
-    <td>
-      <% new_params=[] %>
-      <% params.each do |key,value| %>
-        <%new_params << key+'='+value %>
-      <% end %>
-      <%= new_params.join('&') %>
 
-      <% new_params = 'gothic=on&butterflies=on&body_parts=Arm' %>
-      <% url = "http://localhost:3000/tattoos/#{tattoo.id}?"+new_params %>
-      <%= link_to url do %>
-        <%=image_tag tattoo.image_link_url.to_s %>
-      <% end %>
-      <%= link_to tattoo do %>
-        <%=image_tag tattoo.image_link_url.to_s %>
-      <% end %>
-    </td>
-  </tr>
-<% end %>
+<div class="title_box">
+
+<% @filter_tattoos.each do |tattoo| %>
+  <div class="tattoo_box">
+      <div class="tattoo_name"><td><%= tattoo.name %></td></div>
+        <td>
+          <% new_params=[] %>
+          <% params.each do |key,value| %>
+            <%new_params << key+'='+value %>
+          <% end %>
+          <%= new_params.join('&') %>
+
+          <% new_params = 'gothic=on&butterflies=on&body_parts=Arm' %>
+          <% url = "http://localhost:3000/tattoos/#{tattoo.id}?"+new_params %>
+          <%= link_to url do %>
+            <%=image_tag tattoo.image_link_url.to_s ,:class=> 'tattoo_img'%>
+          <% end %>
+          <%= link_to tattoo do %>
+            <%=image_tag tattoo.image_link_url.to_s ,:class=> 'tattoo_img'%>
+          <% end %>
+        </td>
+    </div> 
+  <% end %>
+  
+</div>

@@ -18,7 +18,6 @@ class TattoosController < ApplicationController
     @body_part_list = @filter.last.split(',')
     @tattoo_array_body_part = Tattoo.joins(:body_parts).where(body_parts: { name: @body_part_list })
 
-
     @unfiltered_tattoo_array = @tattoo_array_body_part + @tattoo_array_style
     @filter_tattoos = @unfiltered_tattoo_array.select { |e| @unfiltered_tattoo_array.count(e) > 1 }.uniq
 
